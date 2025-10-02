@@ -1,1214 +1,156 @@
-2025-09-15 14:15:48:1548 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-15 14:15:48:1548 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-15 14:15:48:1548 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-15 14:15:48:1548 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-15 14:15:48:1548 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-15 14:15:48:1548 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-15 14:15:48:1548 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-15 14:15:48:1548 [32minfo[39m: [32m[39m
+2025-10-01 11:41:41:4141 [32minfo[39m: [32mVerifying email configuration...[39m
+2025-10-01 11:41:42:4142 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
+2025-10-01 11:41:42:4142 [32minfo[39m: [32m🔐 Ethereal user: qplqmziefndkyt3c@ethereal.email[39m
+2025-10-01 11:41:42:4142 [32minfo[39m: [32m🔐 Ethereal pass: ZX5kbhnyXNg2xaU6zU[39m
+2025-10-01 11:41:42:4142 [32minfo[39m: [32m📧 For testing, check Ethereal inbox at: https://ethereal.email/[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32mEmail service is ready.[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 3000[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m📧 Email service: Ready[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m📝 Environment: development[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m[39m
 [32m📋 Available endpoints:[39m
-2025-09-15 14:15:48:1548 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-15 14:15:48:1548 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-15 14:15:48:1548 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-15 14:15:48:1548 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-15 14:15:48:1548 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-15 14:15:48:1548 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-15 14:16:50:1650 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
-2025-09-15 14:18:16:1816 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-15 14:18:16:1816 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-15 14:18:16:1816 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-15 14:18:16:1816 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-15 14:18:16:1816 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-15 14:18:16:1816 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-15 14:18:16:1816 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-15 14:18:16:1816 [32minfo[39m: [32m[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   GET  / - API information[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   GET  /api/health - Health check[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
+2025-10-01 11:41:45:4145 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
+2025-10-01 11:47:28:4728 [32minfo[39m: [32m🔗 Connecting to MQTT broker at mqtt://test.mosquitto.org:1883[39m
+2025-10-01 11:47:29:4729 [32minfo[39m: [32m✅ MQTT connected[39m
+2025-10-01 11:47:30:4730 [32minfo[39m: [32m📡 Subscribed to # (qos=0)[39m
+2025-10-01 11:47:31:4731 [32minfo[39m: [32m🔌 MQTT client shut down[39m
+2025-10-01 12:46:23:4623 [32minfo[39m: [32mVerifying email configuration...[39m
+2025-10-01 12:46:23:4623 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
+2025-10-01 12:46:23:4623 [32minfo[39m: [32m🔐 Ethereal user: wjesvxzen3mup6ea@ethereal.email[39m
+2025-10-01 12:46:23:4623 [32minfo[39m: [32m🔐 Ethereal pass: pM2xQrKwD88fpwqNgk[39m
+2025-10-01 12:46:23:4623 [32minfo[39m: [32m📧 For testing, check Ethereal inbox at: https://ethereal.email/[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32mEmail service is ready.[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 3000[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m📧 Email service: Ready[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m📝 Environment: development[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m[39m
 [32m📋 Available endpoints:[39m
-2025-09-15 14:18:16:1816 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-15 14:18:16:1816 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-15 14:18:16:1816 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-15 14:18:16:1816 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-15 14:18:16:1816 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-15 14:18:16:1816 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-15 14:18:24:1824 [32minfo[39m: [32mGET / - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-15 14:18:24:1824 [32minfo[39m: [32m::1 - - [15/Sep/2025:08:48:24 +0000] "GET / HTTP/1.1" 200 223 "-" "curl/8.7.1"[39m
-2025-09-15 14:21:18:2118 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-15 14:21:18:2118 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-15 14:21:18:2118 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-15 14:21:18:2118 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-15 14:21:18:2118 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-15 14:21:18:2118 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-15 14:21:18:2118 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-15 14:21:18:2118 [32minfo[39m: [32m[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   GET  / - API information[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   GET  /api/health - Health check[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
+2025-10-01 12:46:27:4627 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
+2025-10-02 09:53:41:5341 [32minfo[39m: [32mVerifying email configuration...[39m
+2025-10-02 09:53:42:5342 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
+2025-10-02 09:53:42:5342 [32minfo[39m: [32m🔐 Ethereal user: mv75godvwh2pikiw@ethereal.email[39m
+2025-10-02 09:53:42:5342 [32minfo[39m: [32m🔐 Ethereal pass: RcpdAZBSAeksCKUXWT[39m
+2025-10-02 09:53:42:5342 [32minfo[39m: [32m📧 For testing, check Ethereal inbox at: https://ethereal.email/[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32mEmail service is ready.[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 3000[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m📧 Email service: Ready[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m📝 Environment: development[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m[39m
 [32m📋 Available endpoints:[39m
-2025-09-15 14:21:18:2118 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-15 14:21:18:2118 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-15 14:21:18:2118 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-15 14:21:18:2118 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-15 14:21:18:2118 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-15 14:21:18:2118 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-15 14:22:03:223 [32minfo[39m: [32mPOST /api/auth/request-reset - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-15 14:22:03:223 [32minfo[39m: [32mPassword reset request received:[39m
-2025-09-15 14:22:03:223 [32minfo[39m: [32mProcessing password reset for: sudhakarnatarajan501@gmail.com[39m
-2025-09-15 14:22:03:223 [32minfo[39m: [32mGenerated reset link:[39m
-2025-09-15 14:22:05:225 [31merror[39m: [31m❌ Failed to send password reset email: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to[39m
-[31m535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-32e04675d1csm3033508a91.11 - gsmtp[39m
-2025-09-15 14:22:05:225 [31merror[39m: [31mFailed to send email:[39m
-2025-09-15 14:22:05:225 [32minfo[39m: [32m::1 - - [15/Sep/2025:08:52:05 +0000] "POST /api/auth/request-reset HTTP/1.1" 500 88 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-15 14:23:01:231 [32minfo[39m: [32mPOST /api/auth/request-reset - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-15 14:23:01:231 [32minfo[39m: [32mPassword reset request received:[39m
-2025-09-15 14:23:01:231 [32minfo[39m: [32mProcessing password reset for: sudhakarnatarajan501@gmail.com[39m
-2025-09-15 14:23:01:231 [32minfo[39m: [32mGenerated reset link:[39m
-2025-09-15 14:23:02:232 [31merror[39m: [31m❌ Failed to send password reset email: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to[39m
-[31m535 5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b54a35b7e31sm11025870a12.11 - gsmtp[39m
-2025-09-15 14:23:02:232 [31merror[39m: [31mFailed to send email:[39m
-2025-09-15 14:23:02:232 [32minfo[39m: [32m::1 - - [15/Sep/2025:08:53:02 +0000] "POST /api/auth/request-reset HTTP/1.1" 500 88 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-15 14:34:02:342 [32minfo[39m: [32mPOST /api/auth/request-reset - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-15 14:34:02:342 [32minfo[39m: [32mPassword reset request received:[39m
-2025-09-15 14:34:02:342 [32minfo[39m: [32mProcessing password reset for: test@example.com[39m
-2025-09-15 14:34:02:342 [32minfo[39m: [32mGenerated reset link:[39m
-2025-09-15 14:34:03:343 [31merror[39m: [31m❌ Failed to send password reset email: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to[39m
-[31m535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2651ca21842sm34394905ad.34 - gsmtp[39m
-2025-09-15 14:34:03:343 [31merror[39m: [31mFailed to send email:[39m
-2025-09-15 14:34:03:343 [32minfo[39m: [32m::1 - - [15/Sep/2025:09:04:03 +0000] "POST /api/auth/request-reset HTTP/1.1" 500 88 "-" "curl/8.7.1"[39m
-2025-09-15 14:34:14:3414 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
-2025-09-15 14:34:18:3418 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-15 14:34:18:3418 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-15 14:34:18:3418 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-15 14:34:18:3418 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-15 14:34:18:3418 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-15 14:34:18:3418 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-15 14:34:18:3418 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-15 14:34:18:3418 [32minfo[39m: [32m[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   GET  / - API information[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   GET  /api/health - Health check[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
+2025-10-02 09:53:45:5345 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
+2025-10-02 10:12:13:1213 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
+2025-10-02 10:12:14:1214 [32minfo[39m: [32mVerifying email configuration...[39m
+2025-10-02 10:12:15:1215 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
+2025-10-02 10:12:15:1215 [32minfo[39m: [32m🔐 Ethereal user: e27kyt5jco4j5zyg@ethereal.email[39m
+2025-10-02 10:12:15:1215 [32minfo[39m: [32m🔐 Ethereal pass: 2hsdDGE5G5StzYKvDv[39m
+2025-10-02 10:12:15:1215 [32minfo[39m: [32m📧 For testing, check Ethereal inbox at: https://ethereal.email/[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32mEmail service is ready.[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 3000[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m📧 Email service: Ready[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m📝 Environment: development[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m[39m
 [32m📋 Available endpoints:[39m
-2025-09-15 14:34:18:3418 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-15 14:34:18:3418 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-15 14:34:18:3418 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-15 14:34:18:3418 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-15 14:34:18:3418 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-15 14:34:18:3418 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-15 14:35:58:3558 [32minfo[39m: [32mPOST /api/auth/request-reset - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-15 14:35:58:3558 [32minfo[39m: [32mPassword reset request received:[39m
-2025-09-15 14:35:58:3558 [32minfo[39m: [32mProcessing password reset for: sudhakarnatarajan501@gmail.com[39m
-2025-09-15 14:35:58:3558 [32minfo[39m: [32mGenerated reset link:[39m
-2025-09-15 14:36:00:360 [31merror[39m: [31m❌ Failed to send password reset email: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to[39m
-[31m535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-25dab79baf8sm88467355ad.32 - gsmtp[39m
-2025-09-15 14:36:00:360 [31merror[39m: [31mFailed to send email:[39m
-2025-09-15 14:36:00:360 [32minfo[39m: [32m::1 - - [15/Sep/2025:09:06:00 +0000] "POST /api/auth/request-reset HTTP/1.1" 500 88 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 11:49:00:490 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-16 11:49:00:490 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-16 11:49:00:490 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   GET  / - API information[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   GET  /api/health - Health check[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
+2025-10-02 10:12:18:1218 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
+2025-10-02 10:57:54:5754 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
+2025-10-02 10:57:56:5756 [32minfo[39m: [32mVerifying email configuration...[39m
+2025-10-02 10:57:57:5757 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
+2025-10-02 10:57:57:5757 [32minfo[39m: [32m🔐 Ethereal user: x3c23lp7y5spfndt@ethereal.email[39m
+2025-10-02 10:57:57:5757 [32minfo[39m: [32m🔐 Ethereal pass: QguhCSUDx4Xempmp2G[39m
+2025-10-02 10:57:57:5757 [32minfo[39m: [32m📧 For testing, check Ethereal inbox at: https://ethereal.email/[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32mEmail service is ready.[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 3000[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m📧 Email service: Ready[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m📝 Environment: development[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m[39m
 [32m📋 Available endpoints:[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-16 11:49:00:490 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-16 11:49:11:4911 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758000247137-g78tnsgms - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 11:49:11:4911 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 11:49:11:4911 [33mwarn[39m: [33mDashboard not found for update:[39m
-2025-09-16 11:49:11:4911 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:19:11 +0000] "PUT /api/dashboard/update/panel-1758000247137-g78tnsgms HTTP/1.1" 404 47 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 11:54:44:5444 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-16 11:54:44:5444 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-16 11:54:44:5444 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-16 11:54:44:5444 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-16 11:55:07:557 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 11:55:07:557 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:25:07 +0000] "GET /api/health HTTP/1.1" 200 168 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 11:55:07:557 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758000247137-g78tnsgms - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 11:55:07:557 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 11:55:07:557 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 11:55:07:557 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:25:07 +0000] "PUT /api/dashboard/update/panel-1758000247137-g78tnsgms HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 11:56:15:5615 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 11:56:15:5615 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:26:15 +0000] "GET /api/health HTTP/1.1" 200 168 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 11:56:15:5615 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758000247137-g78tnsgms - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 11:56:15:5615 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 11:56:15:5615 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 11:56:15:5615 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:26:15 +0000] "PUT /api/dashboard/update/panel-1758000247137-g78tnsgms HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 11:57:24:5724 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 11:57:24:5724 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:27:24 +0000] "GET /api/health HTTP/1.1" 200 169 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 11:57:24:5724 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758000247137-g78tnsgms - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 11:57:24:5724 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 11:57:24:5724 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 11:57:24:5724 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:27:24 +0000] "PUT /api/dashboard/update/panel-1758000247137-g78tnsgms HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 11:57:44:5744 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 11:57:44:5744 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:27:44 +0000] "GET /api/health HTTP/1.1" 200 169 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 11:57:44:5744 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758000247137-g78tnsgms - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 11:57:44:5744 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 11:57:44:5744 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 11:57:44:5744 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:27:44 +0000] "PUT /api/dashboard/update/panel-1758000247137-g78tnsgms HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 11:59:41:5941 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 11:59:41:5941 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:29:41 +0000] "GET /api/health HTTP/1.1" 200 168 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 11:59:41:5941 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758000247137-g78tnsgms - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 11:59:41:5941 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 11:59:41:5941 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 11:59:41:5941 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:29:41 +0000] "PUT /api/dashboard/update/panel-1758000247137-g78tnsgms HTTP/1.1" 400 66 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 12:01:35:135 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-16 12:01:35:135 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:31:35 +0000] "GET /api/health HTTP/1.1" 200 169 "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-16 12:01:35:135 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1757582295995-r1zznr20b - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-16 12:01:35:135 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 12:01:35:135 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 12:01:35:135 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:31:35 +0000] "PUT /api/dashboard/update/panel-1757582295995-r1zznr20b HTTP/1.1" 400 66 "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-16 12:02:43:243 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 12:02:43:243 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:32:43 +0000] "GET /api/health HTTP/1.1" 200 167 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 12:02:43:243 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758000247137-g78tnsgms - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 12:02:43:243 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 12:02:43:243 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 12:02:43:243 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:32:43 +0000] "PUT /api/dashboard/update/panel-1758000247137-g78tnsgms HTTP/1.1" 400 66 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 12:02:56:256 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 12:02:56:256 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-16 12:02:56:256 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 12:02:56:256 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:32:56 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 56 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 12:17:19:1719 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 12:17:19:1719 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-16 12:17:19:1719 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 12:17:19:1719 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:47:19 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 56 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 12:18:30:1830 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 12:18:30:1830 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:48:30 +0000] "GET /api/health HTTP/1.1" 200 170 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 12:18:30:1830 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758000247137-g78tnsgms - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 12:18:30:1830 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 12:18:30:1830 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 12:18:30:1830 [32minfo[39m: [32m::1 - - [16/Sep/2025:06:48:30 +0000] "PUT /api/dashboard/update/panel-1758000247137-g78tnsgms HTTP/1.1" 400 66 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 12:25:29:2529 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
-2025-09-16 12:25:33:2533 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-16 12:25:33:2533 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-16 12:25:33:2533 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-16 12:25:33:2533 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-16 12:38:14:3814 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 12:38:14:3814 [32minfo[39m: [32m::1 - - [16/Sep/2025:07:08:14 +0000] "GET /api/health HTTP/1.1" 200 169 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 12:38:14:3814 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758000247137-g78tnsgms - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 12:38:14:3814 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 12:38:14:3814 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 12:38:14:3814 [32minfo[39m: [32m::1 - - [16/Sep/2025:07:08:14 +0000] "PUT /api/dashboard/update/panel-1758000247137-g78tnsgms HTTP/1.1" 400 66 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 12:38:22:3822 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 12:38:22:3822 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-16 12:38:22:3822 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 12:38:22:3822 [32minfo[39m: [32m::1 - - [16/Sep/2025:07:08:22 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 56 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 13:11:02:112 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 13:11:02:112 [32minfo[39m: [32m::1 - - [16/Sep/2025:07:41:02 +0000] "GET /api/health HTTP/1.1" 200 170 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 13:11:02:112 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758000247137-g78tnsgms - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 13:11:02:112 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 13:11:02:112 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 13:11:02:112 [32minfo[39m: [32m::1 - - [16/Sep/2025:07:41:02 +0000] "PUT /api/dashboard/update/panel-1758000247137-g78tnsgms HTTP/1.1" 400 66 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 13:30:52:3052 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 13:30:52:3052 [32minfo[39m: [32m::1 - - [16/Sep/2025:08:00:52 +0000] "GET /api/health HTTP/1.1" 200 169 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 13:30:52:3052 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758000247137-g78tnsgms - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 13:30:52:3052 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-16 13:30:52:3052 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 13:30:52:3052 [32minfo[39m: [32m::1 - - [16/Sep/2025:08:00:52 +0000] "PUT /api/dashboard/update/panel-1758000247137-g78tnsgms HTTP/1.1" 400 66 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 13:31:02:312 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 13:31:02:312 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-16 13:31:02:312 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 13:31:02:312 [32minfo[39m: [32m::1 - - [16/Sep/2025:08:01:02 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 56 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 13:38:41:3841 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 13:38:41:3841 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-16 13:38:41:3841 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 13:38:41:3841 [32minfo[39m: [32m::1 - - [16/Sep/2025:08:08:41 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 56 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 13:43:37:4337 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 13:43:37:4337 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-16 13:43:37:4337 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 13:43:37:4337 [32minfo[39m: [32m::1 - - [16/Sep/2025:08:13:37 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 56 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 13:49:18:4918 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 13:49:18:4918 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-16 13:49:18:4918 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 13:49:18:4918 [32minfo[39m: [32m::1 - - [16/Sep/2025:08:19:18 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 56 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 13:57:35:5735 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 13:57:35:5735 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-16 13:57:35:5735 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 13:57:35:5735 [32minfo[39m: [32m::1 - - [16/Sep/2025:08:27:35 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 56 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 13:58:22:5822 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 13:58:22:5822 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-16 13:58:22:5822 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 13:58:22:5822 [32minfo[39m: [32m::1 - - [16/Sep/2025:08:28:22 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 56 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-16 14:06:57:657 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-16 14:06:57:657 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-16 14:06:57:657 [33mwarn[39m: [33mValidation error:[39m
-2025-09-16 14:06:57:657 [32minfo[39m: [32m::1 - - [16/Sep/2025:08:36:57 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 56 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-17 13:27:29:2729 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-17 13:27:29:2729 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-17 13:27:29:2729 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-17 13:27:29:2729 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-17 13:27:35:2735 [32minfo[39m: [32mSIGTERM received. Shutting down gracefully...[39m
-2025-09-17 13:27:45:2745 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-17 13:27:45:2745 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-17 13:27:45:2745 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-17 13:27:45:2745 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-17 13:27:51:2751 [32minfo[39m: [32mGET /api/dashboard/generate-topic-id - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-17 13:27:51:2751 [32minfo[39m: [32mTopic ID generated via API:[39m
-2025-09-17 13:27:51:2751 [32minfo[39m: [32m::1 - - [17/Sep/2025:07:57:51 +0000] "GET /api/dashboard/generate-topic-id HTTP/1.1" 200 146 "-" "curl/8.7.1"[39m
-2025-09-17 13:27:56:2756 [32minfo[39m: [32mGET /api/dashboard/generate-topic-id - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-17 13:27:56:2756 [32minfo[39m: [32mTopic ID generated via API:[39m
-2025-09-17 13:27:56:2756 [32minfo[39m: [32m::1 - - [17/Sep/2025:07:57:56 +0000] "GET /api/dashboard/generate-topic-id HTTP/1.1" 200 146 "-" "curl/8.7.1"[39m
-2025-09-17 13:27:56:2756 [32minfo[39m: [32mGET /api/dashboard/generate-topic-id - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-17 13:27:56:2756 [32minfo[39m: [32mTopic ID generated via API:[39m
-2025-09-17 13:27:56:2756 [32minfo[39m: [32m::1 - - [17/Sep/2025:07:57:56 +0000] "GET /api/dashboard/generate-topic-id HTTP/1.1" 200 146 "-" "curl/8.7.1"[39m
-2025-09-17 13:27:56:2756 [32minfo[39m: [32mGET /api/dashboard/generate-topic-id - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-17 13:27:56:2756 [32minfo[39m: [32mTopic ID generated via API:[39m
-2025-09-17 13:27:56:2756 [32minfo[39m: [32m::1 - - [17/Sep/2025:07:57:56 +0000] "GET /api/dashboard/generate-topic-id HTTP/1.1" 200 146 "-" "curl/8.7.1"[39m
-2025-09-17 13:28:11:2811 [32minfo[39m: [32mSIGTERM received. Shutting down gracefully...[39m
-2025-09-18 13:35:56:3556 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-18 13:35:56:3556 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-18 13:35:56:3556 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-18 13:35:56:3556 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-18 13:36:10:3610 [32minfo[39m: [32mGET /api/dashboard/generate-topic-id - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15[39m
-2025-09-18 13:36:10:3610 [32minfo[39m: [32mTopic ID generated via API:[39m
-2025-09-18 13:36:10:3610 [32minfo[39m: [32m::1 - - [18/Sep/2025:08:06:10 +0000] "GET /api/dashboard/generate-topic-id HTTP/1.1" 200 146 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15"[39m
-2025-09-18 13:44:59:4459 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15[39m
-2025-09-18 13:44:59:4459 [32minfo[39m: [32m::1 - - [18/Sep/2025:08:14:59 +0000] "GET /api/health HTTP/1.1" 200 169 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15"[39m
-2025-09-18 13:44:59:4459 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758182783262-yplhnz4wx - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15[39m
-2025-09-18 13:44:59:4459 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-18 13:44:59:4459 [33mwarn[39m: [33mValidation error:[39m
-2025-09-18 13:44:59:4459 [32minfo[39m: [32m::1 - - [18/Sep/2025:08:14:59 +0000] "PUT /api/dashboard/update/panel-1758182783262-yplhnz4wx HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15"[39m
-2025-09-18 13:45:05:455 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15[39m
-2025-09-18 13:45:05:455 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-18 13:45:05:455 [33mwarn[39m: [33mValidation error:[39m
-2025-09-18 13:45:05:455 [32minfo[39m: [32m::1 - - [18/Sep/2025:08:15:05 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 54 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15"[39m
-2025-09-18 13:46:19:4619 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15[39m
-2025-09-18 13:46:19:4619 [32minfo[39m: [32m::1 - - [18/Sep/2025:08:16:19 +0000] "GET /api/health HTTP/1.1" 200 167 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15"[39m
-2025-09-18 13:46:19:4619 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758182783262-yplhnz4wx - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15[39m
-2025-09-18 13:46:19:4619 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-18 13:46:19:4619 [33mwarn[39m: [33mValidation error:[39m
-2025-09-18 13:46:19:4619 [32minfo[39m: [32m::1 - - [18/Sep/2025:08:16:19 +0000] "PUT /api/dashboard/update/panel-1758182783262-yplhnz4wx HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15"[39m
-2025-09-18 13:53:43:5343 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15[39m
-2025-09-18 13:53:43:5343 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-18 13:53:43:5343 [33mwarn[39m: [33mValidation error:[39m
-2025-09-18 13:53:43:5343 [32minfo[39m: [32m::1 - - [18/Sep/2025:08:23:43 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 54 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15"[39m
-2025-09-18 14:01:35:135 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15[39m
-2025-09-18 14:01:35:135 [32minfo[39m: [32m::1 - - [18/Sep/2025:08:31:35 +0000] "GET /api/health HTTP/1.1" 200 170 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15"[39m
-2025-09-18 14:01:35:135 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758182783262-yplhnz4wx - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15[39m
-2025-09-18 14:01:35:135 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-18 14:01:35:135 [33mwarn[39m: [33mValidation error:[39m
-2025-09-18 14:01:35:135 [32minfo[39m: [32m::1 - - [18/Sep/2025:08:31:35 +0000] "PUT /api/dashboard/update/panel-1758182783262-yplhnz4wx HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15"[39m
-2025-09-18 14:02:47:247 [32minfo[39m: [32mGET /api/dashboard/generate-topic-id - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-18 14:02:47:247 [32minfo[39m: [32mTopic ID generated via API:[39m
-2025-09-18 14:02:47:247 [32minfo[39m: [32m::1 - - [18/Sep/2025:08:32:47 +0000] "GET /api/dashboard/generate-topic-id HTTP/1.1" 200 146 "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-19 12:18:47:1847 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-19 12:18:47:1847 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-19 12:18:47:1847 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-19 12:18:47:1847 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-19 12:19:20:1920 [32minfo[39m: [32mSIGTERM received. Shutting down gracefully...[39m
-2025-09-19 12:19:44:1944 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-19 12:19:44:1944 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-19 12:19:44:1944 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-19 12:19:44:1944 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-19 12:19:55:1955 [32minfo[39m: [32mPOST /api/dashboard/share/panel-1758264199643-ukrjj0f3s - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 12:19:55:1955 [32minfo[39m: [32mDashboard share request received:[39m
-2025-09-19 12:19:55:1955 [33mwarn[39m: [33mDashboard not found for sharing:[39m
-2025-09-19 12:19:55:1955 [32minfo[39m: [32m::1 - - [19/Sep/2025:06:49:55 +0000] "POST /api/dashboard/share/panel-1758264199643-ukrjj0f3s HTTP/1.1" 404 47 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-19 12:35:59:3559 [32minfo[39m: [32mGET /api/dashboard/shared/shared-1758265082041-953igruwt - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 12:35:59:3559 [32minfo[39m: [32mShared dashboard access request:[39m
-2025-09-19 12:35:59:3559 [33mwarn[39m: [33mShared dashboard not found:[39m
-2025-09-19 12:35:59:3559 [32minfo[39m: [32m::1 - - [19/Sep/2025:07:05:59 +0000] "GET /api/dashboard/shared/shared-1758265082041-953igruwt HTTP/1.1" 404 54 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-19 12:36:05:365 [32minfo[39m: [32mGET /api/dashboard/shared/shared-1758265082041-953igruwt - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 12:36:05:365 [32minfo[39m: [32mShared dashboard access request:[39m
-2025-09-19 12:36:05:365 [33mwarn[39m: [33mShared dashboard not found:[39m
-2025-09-19 12:36:05:365 [32minfo[39m: [32m::1 - - [19/Sep/2025:07:06:05 +0000] "GET /api/dashboard/shared/shared-1758265082041-953igruwt HTTP/1.1" 404 54 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-19 12:36:31:3631 [32minfo[39m: [32mSIGTERM received. Shutting down gracefully...[39m
-2025-09-19 12:36:40:3640 [32minfo[39m: [32mGET /api/dashboard/shared/shared-1758265082041-953igruwt - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 12:36:40:3640 [32minfo[39m: [32mShared dashboard access request:[39m
-2025-09-19 12:36:40:3640 [33mwarn[39m: [33mShared dashboard not found:[39m
-2025-09-19 12:36:40:3640 [32minfo[39m: [32m::1 - - [19/Sep/2025:07:06:40 +0000] "GET /api/dashboard/shared/shared-1758265082041-953igruwt HTTP/1.1" 404 54 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-19 12:37:04:374 [32minfo[39m: [32mGET /api/dashboard/shared/shared-1758265082041-953igruwt - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 12:37:04:374 [32minfo[39m: [32mShared dashboard access request:[39m
-2025-09-19 12:37:04:374 [33mwarn[39m: [33mShared dashboard not found:[39m
-2025-09-19 12:37:04:374 [32minfo[39m: [32m::1 - - [19/Sep/2025:07:07:04 +0000] "GET /api/dashboard/shared/shared-1758265082041-953igruwt HTTP/1.1" 404 54 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-19 12:37:04:374 [32minfo[39m: [32mGET /api/dashboard/shared/shared-1758265082041-953igruwt - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 12:37:04:374 [32minfo[39m: [32mShared dashboard access request:[39m
-2025-09-19 12:37:04:374 [33mwarn[39m: [33mShared dashboard not found:[39m
-2025-09-19 12:37:04:374 [32minfo[39m: [32m::1 - - [19/Sep/2025:07:07:04 +0000] "GET /api/dashboard/shared/shared-1758265082041-953igruwt HTTP/1.1" 404 54 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-19 12:37:48:3748 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
-2025-09-19 12:37:53:3753 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-19 12:37:53:3753 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-19 12:37:53:3753 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-19 12:37:53:3753 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-19 13:07:30:730 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-19 13:07:30:730 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-19 13:07:30:730 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-19 13:07:30:730 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-19 13:08:11:811 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 13:08:11:811 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-19 13:08:11:811 [33mwarn[39m: [33mValidation error:[39m
-2025-09-19 13:08:11:811 [32minfo[39m: [32m::1 - - [19/Sep/2025:07:38:11 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 54 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-19 13:10:07:107 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 13:10:07:107 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-19 13:10:07:107 [33mwarn[39m: [33mValidation error:[39m
-2025-09-19 13:10:07:107 [32minfo[39m: [32m::1 - - [19/Sep/2025:07:40:07 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 54 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-19 13:10:37:1037 [32minfo[39m: [32mSIGTERM received. Shutting down gracefully...[39m
-2025-09-19 13:13:53:1353 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-19 13:13:53:1353 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-19 13:13:53:1353 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-19 13:13:53:1353 [32minfo[39m: [32mSIGTERM received. Shutting down gracefully...[39m
-2025-09-19 13:14:23:1423 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-19 13:14:23:1423 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-19 13:14:23:1423 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-19 13:14:23:1423 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-19 13:15:57:1557 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 13:15:57:1557 [32minfo[39m: [32m::1 - - [19/Sep/2025:07:45:57 +0000] "GET /api/health HTTP/1.1" 200 168 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-19 13:15:57:1557 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758264199643-ukrjj0f3s - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 13:15:57:1557 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-19 13:15:57:1557 [33mwarn[39m: [33mValidation error:[39m
-2025-09-19 13:15:57:1557 [32minfo[39m: [32m::1 - - [19/Sep/2025:07:45:57 +0000] "PUT /api/dashboard/update/panel-1758264199643-ukrjj0f3s HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-19 13:16:06:166 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 13:16:06:166 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-19 13:16:06:166 [33mwarn[39m: [33mValidation error:[39m
-2025-09-19 13:16:06:166 [32minfo[39m: [32m::1 - - [19/Sep/2025:07:46:06 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 54 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-19 13:16:39:1639 [32minfo[39m: [32mPOST /api/dashboard/publish - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-19 13:16:39:1639 [32minfo[39m: [32mDashboard publish request received:[39m
-2025-09-19 13:16:39:1639 [33mwarn[39m: [33mValidation error:[39m
-2025-09-19 13:16:39:1639 [32minfo[39m: [32m::1 - - [19/Sep/2025:07:46:39 +0000] "POST /api/dashboard/publish HTTP/1.1" 400 54 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-22 10:58:58:5858 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 10:58:58:5858 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-22 10:58:58:5858 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 10:58:58:5858 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 10:59:06:596 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-22 10:59:06:596 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:29:06 +0000] "GET /api/health HTTP/1.1" 200 167 "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-22 10:59:06:596 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758518597335-zoi2khlp0 - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-22 10:59:06:596 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-22 10:59:06:596 [33mwarn[39m: [33mValidation error:[39m
-2025-09-22 10:59:06:596 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:29:06 +0000] "PUT /api/dashboard/update/panel-1758518597335-zoi2khlp0 HTTP/1.1" 400 59 "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-22 11:02:54:254 [32minfo[39m: [32mGET /api/dashboard/generate-topic-id - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-22 11:02:54:254 [32minfo[39m: [32mTopic ID generated via API:[39m
-2025-09-22 11:02:54:254 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:32:54 +0000] "GET /api/dashboard/generate-topic-id HTTP/1.1" 200 146 "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-22 11:03:24:324 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-22 11:03:24:324 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:33:24 +0000] "GET /api/health HTTP/1.1" 200 169 "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-22 11:03:24:324 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758518597335-zoi2khlp0 - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-22 11:03:24:324 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-22 11:03:24:324 [33mwarn[39m: [33mValidation error:[39m
-2025-09-22 11:03:24:324 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:33:24 +0000] "PUT /api/dashboard/update/panel-1758518597335-zoi2khlp0 HTTP/1.1" 400 66 "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-22 11:04:35:435 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-22 11:04:35:435 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:34:35 +0000] "GET /api/health HTTP/1.1" 200 168 "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-22 11:04:35:435 [32minfo[39m: [32mPUT /api/dashboard/update/panel-1758518597335-zoi2khlp0 - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-22 11:04:35:435 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-22 11:04:35:435 [33mwarn[39m: [33mDashboard not found for update:[39m
-2025-09-22 11:04:35:435 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:34:35 +0000] "PUT /api/dashboard/update/panel-1758518597335-zoi2khlp0 HTTP/1.1" 404 47 "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-22 11:08:10:810 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:08:16:816 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:08:16:816 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:38:16 +0000] "GET /api/health HTTP/1.1" 200 168 "-" "curl/8.7.1"[39m
-2025-09-22 11:08:22:822 [32minfo[39m: [32mGET /api/dashboard/panel-1758518597335-zoi2khlp0 - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:08:22:822 [31merror[39m: [31mNot Found - /api/dashboard/panel-1758518597335-zoi2khlp0[39m
-2025-09-22 11:08:22:822 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:38:22 +0000] "GET /api/dashboard/panel-1758518597335-zoi2khlp0 HTTP/1.1" 500 1450 "-" "curl/8.7.1"[39m
-2025-09-22 11:09:39:939 [32minfo[39m: [32mGET /api/dashboard/panel-1758518597335-zoi2khlp0 - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:09:39:939 [31merror[39m: [31mNot Found - /api/dashboard/panel-1758518597335-zoi2khlp0[39m
-2025-09-22 11:09:39:939 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:39:39 +0000] "GET /api/dashboard/panel-1758518597335-zoi2khlp0 HTTP/1.1" 500 1450 "-" "curl/8.7.1"[39m
-2025-09-22 11:09:45:945 [32minfo[39m: [32mSIGTERM received. Shutting down gracefully...[39m
-2025-09-22 11:09:49:949 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:09:49:949 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-22 11:09:49:949 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 11:09:49:949 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 11:09:52:952 [32minfo[39m: [32mGET /api/dashboard/panel-1758518597335-zoi2khlp0 - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:09:52:952 [32minfo[39m: [32mDashboard get request:[39m
-2025-09-22 11:09:52:952 [33mwarn[39m: [33mDashboard not found:[39m
-2025-09-22 11:09:52:952 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:39:52 +0000] "GET /api/dashboard/panel-1758518597335-zoi2khlp0 HTTP/1.1" 404 47 "-" "curl/8.7.1"[39m
-2025-09-22 11:09:56:956 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:09:56:956 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:39:56 +0000] "GET /api/health HTTP/1.1" 200 165 "-" "curl/8.7.1"[39m
-2025-09-22 11:22:21:2221 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:22:40:2240 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:24:09:249 [32minfo[39m: [32mSIGTERM received. Shutting down gracefully...[39m
-2025-09-22 11:24:17:2417 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:24:17:2417 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-22 11:24:17:2417 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 11:24:17:2417 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 11:24:22:2422 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:24:22:2422 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:54:22 +0000] "GET /api/health HTTP/1.1" 200 167 "-" "curl/8.7.1"[39m
-2025-09-22 11:24:27:2427 [32minfo[39m: [32mGET /api/dashboard/panel-1758518597335-zoi2khlp0 - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:24:27:2427 [32minfo[39m: [32mDashboard get request:[39m
-2025-09-22 11:24:27:2427 [33mwarn[39m: [33mDashboard not found:[39m
-2025-09-22 11:24:27:2427 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:54:27 +0000] "GET /api/dashboard/panel-1758518597335-zoi2khlp0 HTTP/1.1" 404 47 "-" "curl/8.7.1"[39m
-2025-09-22 11:25:05:255 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:27:33:2733 [32minfo[39m: [32m✅ Email transporter created successfully[39m
-2025-09-22 11:27:33:2733 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 11:27:34:2734 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:27:34:2734 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-22 11:27:34:2734 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 11:27:34:2734 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 11:28:16:2816 [32minfo[39m: [32m✅ Email transporter created successfully[39m
-2025-09-22 11:28:16:2816 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 11:28:18:2818 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:28:46:2846 [32minfo[39m: [32m✅ Email transporter created successfully[39m
-2025-09-22 11:28:46:2846 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 11:28:47:2847 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:28:54:2854 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:28:54:2854 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:58:54 +0000] "GET /api/health HTTP/1.1" 200 167 "-" "curl/8.7.1"[39m
-2025-09-22 11:28:58:2858 [32minfo[39m: [32mGET / - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:28:58:2858 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:58:58 +0000] "GET / HTTP/1.1" 200 223 "-" "curl/8.7.1"[39m
-2025-09-22 11:29:02:292 [32minfo[39m: [32mGET /api/docs - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:29:02:292 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:59:02 +0000] "GET /api/docs HTTP/1.1" 200 696 "-" "curl/8.7.1"[39m
-2025-09-22 11:29:06:296 [32minfo[39m: [32mGET /api/dashboard/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:29:06:296 [32minfo[39m: [32mDashboard get request:[39m
-2025-09-22 11:29:06:296 [33mwarn[39m: [33mDashboard not found:[39m
-2025-09-22 11:29:06:296 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:59:06 +0000] "GET /api/dashboard/health HTTP/1.1" 404 47 "-" "curl/8.7.1"[39m
-2025-09-22 11:29:12:2912 [32minfo[39m: [32mGET /api/dashboard/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:29:12:2912 [32minfo[39m: [32mDashboard get request:[39m
-2025-09-22 11:29:12:2912 [33mwarn[39m: [33mDashboard not found:[39m
-2025-09-22 11:29:12:2912 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:59:12 +0000] "GET /api/dashboard/health HTTP/1.1" 404 47 "-" "curl/8.7.1"[39m
-2025-09-22 11:29:26:2926 [32minfo[39m: [32mGET /api/dashboard/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:29:26:2926 [32minfo[39m: [32mDashboard get request:[39m
-2025-09-22 11:29:26:2926 [33mwarn[39m: [33mDashboard not found:[39m
-2025-09-22 11:29:26:2926 [32minfo[39m: [32m::1 - - [22/Sep/2025:05:59:26 +0000] "GET /api/dashboard/health HTTP/1.1" 404 47 "-" "curl/8.7.1"[39m
-2025-09-22 11:29:58:2958 [32minfo[39m: [32mSIGTERM received. Shutting down gracefully...[39m
-2025-09-22 11:30:03:303 [32minfo[39m: [32m✅ Email transporter created successfully[39m
-2025-09-22 11:30:03:303 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 11:30:10:3010 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:30:10:3010 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-22 11:30:10:3010 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 11:30:10:3010 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 11:32:22:3222 [32minfo[39m: [32mGET /api/dashboard/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:32:22:3222 [32minfo[39m: [32m::1 - - [22/Sep/2025:06:02:22 +0000] "GET /api/dashboard/health HTTP/1.1" 200 343 "-" "curl/8.7.1"[39m
-2025-09-22 11:32:40:3240 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:32:40:3240 [32minfo[39m: [32m::1 - - [22/Sep/2025:06:02:40 +0000] "GET /api/health HTTP/1.1" 200 169 "-" "curl/8.7.1"[39m
-2025-09-22 11:32:43:3243 [32minfo[39m: [32mGET /api/dashboard/generate-topic-id - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:32:43:3243 [32minfo[39m: [32mDashboard get request:[39m
-2025-09-22 11:32:43:3243 [33mwarn[39m: [33mDashboard not found:[39m
-2025-09-22 11:32:43:3243 [32minfo[39m: [32m::1 - - [22/Sep/2025:06:02:43 +0000] "GET /api/dashboard/generate-topic-id HTTP/1.1" 404 47 "-" "curl/8.7.1"[39m
-2025-09-22 11:33:05:335 [32minfo[39m: [32mSIGTERM received. Shutting down gracefully...[39m
-2025-09-22 11:33:12:3312 [32minfo[39m: [32m✅ Email transporter created successfully[39m
-2025-09-22 11:33:12:3312 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 11:33:13:3313 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:33:13:3313 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-22 11:33:13:3313 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:3000[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 11:33:13:3313 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 11:33:21:3321 [32minfo[39m: [32mGET /api/dashboard/generate-topic-id - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:33:21:3321 [32minfo[39m: [32mTopic ID generated via API:[39m
-2025-09-22 11:33:21:3321 [32minfo[39m: [32m::1 - - [22/Sep/2025:06:03:21 +0000] "GET /api/dashboard/generate-topic-id HTTP/1.1" 200 146 "-" "curl/8.7.1"[39m
-2025-09-22 11:33:27:3327 [32minfo[39m: [32mPOST /api/dashboard/save - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:33:27:3327 [32minfo[39m: [32mDashboard save request received:[39m
-2025-09-22 11:33:27:3327 [32minfo[39m: [32mGenerated new topic ID:[39m
-2025-09-22 11:33:27:3327 [32minfo[39m: [32mDashboard saved successfully:[39m
-2025-09-22 11:33:27:3327 [32minfo[39m: [32m::1 - - [22/Sep/2025:06:03:27 +0000] "POST /api/dashboard/save HTTP/1.1" 200 212 "-" "curl/8.7.1"[39m
-2025-09-22 11:33:47:3347 [32minfo[39m: [32mGET /api/dashboard/175852100772022 - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:33:47:3347 [32minfo[39m: [32mDashboard get request:[39m
-2025-09-22 11:33:47:3347 [32minfo[39m: [32mDashboard retrieved successfully:[39m
-2025-09-22 11:33:47:3347 [32minfo[39m: [32m::1 - - [22/Sep/2025:06:03:47 +0000] "GET /api/dashboard/175852100772022 HTTP/1.1" 200 281 "-" "curl/8.7.1"[39m
-2025-09-22 11:34:00:340 [32minfo[39m: [32mGET /api/dashboard/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:34:00:340 [32minfo[39m: [32m::1 - - [22/Sep/2025:06:04:00 +0000] "GET /api/dashboard/health HTTP/1.1" 200 345 "-" "curl/8.7.1"[39m
-2025-09-22 11:35:43:3543 [32minfo[39m: [32m✅ Email transporter created successfully[39m
-2025-09-22 11:35:43:3543 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 11:35:44:3544 [31merror[39m: [31m❌ Email server configuration error:[39m
-2025-09-22 11:37:58:3758 [33mwarn[39m: [33m⚠️ Email credentials not provided. Email functionality will be disabled.[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 11:37:58:3758 [33mwarn[39m: [33m⚠️ Email transporter not available. Email functionality disabled.[39m
-2025-09-22 11:37:58:3758 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-22 11:37:58:3758 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 11:37:58:3758 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 11:38:08:388 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:38:08:388 [32minfo[39m: [32m::1 - - [22/Sep/2025:06:08:08 +0000] "GET /api/health HTTP/1.1" 200 167 "-" "curl/8.7.1"[39m
-2025-09-22 11:41:24:4124 [33mwarn[39m: [33m⚠️ Email credentials not provided. Email functionality will be disabled.[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 11:41:24:4124 [33mwarn[39m: [33m⚠️ Email transporter not available. Email functionality disabled.[39m
-2025-09-22 11:41:24:4124 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-22 11:41:24:4124 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 11:41:24:4124 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 11:41:30:4130 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:41:30:4130 [32minfo[39m: [32m::1 - - [22/Sep/2025:06:11:30 +0000] "GET /api/health HTTP/1.1" 200 167 "-" "curl/8.7.1"[39m
-2025-09-22 11:43:48:4348 [33mwarn[39m: [33m⚠️ Email credentials not provided. Email functionality will be disabled.[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 11:43:48:4348 [33mwarn[39m: [33m⚠️ Email transporter not available. Email functionality disabled.[39m
-2025-09-22 11:43:48:4348 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-22 11:43:48:4348 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 11:43:48:4348 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 11:43:59:4359 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: curl/8.7.1[39m
-2025-09-22 11:43:59:4359 [32minfo[39m: [32m::1 - - [22/Sep/2025:06:13:59 +0000] "GET /api/health HTTP/1.1" 200 168 "-" "curl/8.7.1"[39m
-2025-09-22 11:48:47:4847 [32minfo[39m: [32mSIGTERM received. Shutting down gracefully...[39m
-2025-09-22 11:54:43:5443 [33mwarn[39m: [33m⚠️ Email credentials not provided. Email functionality will be disabled.[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 11:54:43:5443 [33mwarn[39m: [33m⚠️ Email transporter not available. Email functionality disabled.[39m
-2025-09-22 11:54:43:5443 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-22 11:54:43:5443 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 11:54:43:5443 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 12:08:10:810 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
-2025-09-22 12:08:17:817 [33mwarn[39m: [33m⚠️ Email credentials not provided. Email functionality will be disabled.[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 12:08:17:817 [33mwarn[39m: [33m⚠️ Email transporter not available. Email functionality disabled.[39m
-2025-09-22 12:08:17:817 [33mwarn[39m: [33mEmail service not configured. Password reset emails will not work.[39m
-2025-09-22 12:08:17:817 [33mwarn[39m: [33mPlease configure your email settings in the .env file.[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m📧 Email service: Not configured[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 12:08:17:817 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 12:15:51:1551 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
-2025-09-22 12:15:53:1553 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 12:15:54:1554 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
-2025-09-22 12:15:54:1554 [32minfo[39m: [32m🔐 Ethereal user: e6qzwnxymhbpw4yr@ethereal.email[39m
-2025-09-22 12:15:54:1554 [32minfo[39m: [32m🔐 Ethereal pass: wzQvzMJDYNgEUFscJj[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32mEmail service is ready.[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m📧 Email service: Ready[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 12:15:57:1557 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 12:16:02:162 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
-2025-09-22 12:16:15:1615 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 12:16:16:1616 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
-2025-09-22 12:16:16:1616 [32minfo[39m: [32m🔐 Ethereal user: fshmms7nrrawmlpf@ethereal.email[39m
-2025-09-22 12:16:16:1616 [32minfo[39m: [32m🔐 Ethereal pass: pkadx2sTky3tcUunTx[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32mEmail service is ready.[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m📧 Email service: Ready[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 12:16:19:1619 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 13:38:39:3839 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 13:38:40:3840 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
-2025-09-22 13:38:40:3840 [32minfo[39m: [32m🔐 Ethereal user: i4yijgiibaeiaqyn@ethereal.email[39m
-2025-09-22 13:38:40:3840 [32minfo[39m: [32m🔐 Ethereal pass: VSmZkp8tNd1VDjaYyR[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32mEmail service is ready.[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 3000[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m📧 Email service: Ready[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
-2025-09-22 13:38:43:3843 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
-2025-09-22 13:43:14:4314 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 13:43:14:4314 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
-2025-09-22 13:43:14:4314 [32minfo[39m: [32m🔐 Ethereal user: uwmltomzmkoe5gkj@ethereal.email[39m
-2025-09-22 13:43:14:4314 [32minfo[39m: [32m🔐 Ethereal pass: xjAkS8bhCbq8HJCnK7[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32mEmail service is ready.[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m📧 Email service: Ready[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
-2025-09-22 13:43:17:4317 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
-2025-09-22 17:10:48:1048 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 17:10:49:1049 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
-2025-09-22 17:10:49:1049 [32minfo[39m: [32m🔐 Ethereal user: dftabrww6seq4q6h@ethereal.email[39m
-2025-09-22 17:10:49:1049 [32minfo[39m: [32m🔐 Ethereal pass: t9RHHpV1Dr7Cev25Xd[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32mEmail service is ready.[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m📧 Email service: Ready[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
-2025-09-22 17:10:52:1052 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
-2025-09-22 17:12:12:1212 [32minfo[39m: [32mGET /api/dashboard/generate-topic-id - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-22 17:12:12:1212 [32minfo[39m: [32mTopic ID generated via API:[39m
-2025-09-22 17:12:12:1212 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:42:12 +0000] "GET /api/dashboard/generate-topic-id HTTP/1.1" 200 146 "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-22 17:12:56:1256 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-22 17:12:56:1256 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:42:56 +0000] "GET /api/health HTTP/1.1" 200 169 "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-22 17:12:56:1256 [32minfo[39m: [32mGET /api/dashboard/panel-1758541357058-lk9tsllxg - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-22 17:12:56:1256 [32minfo[39m: [32mDashboard get request:[39m
-2025-09-22 17:12:56:1256 [33mwarn[39m: [33mDashboard not found:[39m
-2025-09-22 17:12:56:1256 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:42:56 +0000] "GET /api/dashboard/panel-1758541357058-lk9tsllxg HTTP/1.1" 404 47 "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-22 17:12:56:1256 [32minfo[39m: [32mPOST /api/dashboard/save - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-22 17:12:56:1256 [32minfo[39m: [32mDashboard save request received:[39m
-2025-09-22 17:12:56:1256 [32minfo[39m: [32mGenerated new topic ID:[39m
-2025-09-22 17:12:56:1256 [32minfo[39m: [32mDashboard saved successfully:[39m
-2025-09-22 17:12:56:1256 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:42:56 +0000] "POST /api/dashboard/save HTTP/1.1" 200 202 "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-22 17:13:23:1323 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-22 17:13:23:1323 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:43:23 +0000] "GET /api/health HTTP/1.1" 200 169 "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-22 17:13:23:1323 [32minfo[39m: [32mGET /api/dashboard/175854137621052 - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-22 17:13:23:1323 [32minfo[39m: [32mDashboard get request:[39m
-2025-09-22 17:13:23:1323 [32minfo[39m: [32mDashboard retrieved successfully:[39m
-2025-09-22 17:13:23:1323 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:43:23 +0000] "GET /api/dashboard/175854137621052 HTTP/1.1" 200 - "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-22 17:13:23:1323 [32minfo[39m: [32mPUT /api/dashboard/update/175854137621052 - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-22 17:13:23:1323 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-22 17:13:23:1323 [32minfo[39m: [32mDashboard updated successfully:[39m
-2025-09-22 17:13:23:1323 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:43:23 +0000] "PUT /api/dashboard/update/175854137621052 HTTP/1.1" 200 204 "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-22 17:13:28:1328 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-22 17:13:28:1328 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:43:28 +0000] "GET /api/health HTTP/1.1" 200 169 "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-22 17:13:28:1328 [32minfo[39m: [32mGET /api/dashboard/175854137621052 - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-22 17:13:28:1328 [32minfo[39m: [32mDashboard get request:[39m
-2025-09-22 17:13:28:1328 [32minfo[39m: [32mDashboard retrieved successfully:[39m
-2025-09-22 17:13:28:1328 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:43:28 +0000] "GET /api/dashboard/175854137621052 HTTP/1.1" 200 - "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-22 17:13:28:1328 [32minfo[39m: [32mPUT /api/dashboard/update/175854137621052 - IP: ::1 - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36[39m
-2025-09-22 17:13:28:1328 [32minfo[39m: [32mDashboard update request received:[39m
-2025-09-22 17:13:28:1328 [32minfo[39m: [32mDashboard updated successfully:[39m
-2025-09-22 17:13:28:1328 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:43:28 +0000] "PUT /api/dashboard/update/175854137621052 HTTP/1.1" 200 204 "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"[39m
-2025-09-22 17:15:49:1549 [32minfo[39m: [32mGET /api/dashboard/generate-topic-id - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-22 17:15:49:1549 [32minfo[39m: [32mTopic ID generated via API:[39m
-2025-09-22 17:15:49:1549 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:45:49 +0000] "GET /api/dashboard/generate-topic-id HTTP/1.1" 200 146 "http://localhost:5173/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-22 17:16:34:1634 [32minfo[39m: [32mGET /api/health - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-22 17:16:34:1634 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:46:34 +0000] "GET /api/health HTTP/1.1" 200 169 "http://localhost:5173/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-22 17:16:34:1634 [32minfo[39m: [32mGET /api/dashboard/panel-1758541557544-l248aqtfc - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-22 17:16:34:1634 [32minfo[39m: [32mDashboard get request:[39m
-2025-09-22 17:16:34:1634 [33mwarn[39m: [33mDashboard not found:[39m
-2025-09-22 17:16:34:1634 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:46:34 +0000] "GET /api/dashboard/panel-1758541557544-l248aqtfc HTTP/1.1" 404 47 "http://localhost:5173/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-22 17:16:34:1634 [32minfo[39m: [32mPOST /api/dashboard/save - IP: ::1 - User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1[39m
-2025-09-22 17:16:34:1634 [32minfo[39m: [32mDashboard save request received:[39m
-2025-09-22 17:16:34:1634 [32minfo[39m: [32mGenerated new topic ID:[39m
-2025-09-22 17:16:34:1634 [32minfo[39m: [32mDashboard saved successfully:[39m
-2025-09-22 17:16:34:1634 [32minfo[39m: [32m::1 - - [22/Sep/2025:11:46:34 +0000] "POST /api/dashboard/save HTTP/1.1" 200 204 "http://localhost:5173/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"[39m
-2025-09-22 17:20:59:2059 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
-2025-09-22 17:21:01:211 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 17:21:02:212 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
-2025-09-22 17:21:02:212 [32minfo[39m: [32m🔐 Ethereal user: be4edlj5veqhsidp@ethereal.email[39m
-2025-09-22 17:21:02:212 [32minfo[39m: [32m🔐 Ethereal pass: J2kAuz4z1Me9EUkhyr[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32mEmail service is ready.[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m📧 Email service: Ready[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
-2025-09-22 17:21:05:215 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
-2025-09-22 17:38:25:3825 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
-2025-09-22 17:38:27:3827 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 17:38:27:3827 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
-2025-09-22 17:38:27:3827 [32minfo[39m: [32m🔐 Ethereal user: u65tj52ehqkz5hjg@ethereal.email[39m
-2025-09-22 17:38:27:3827 [32minfo[39m: [32m🔐 Ethereal pass: 232xUjUDP59c5QaY1v[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32mEmail service is ready.[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m📧 Email service: Ready[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
-2025-09-22 17:38:30:3830 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
-2025-09-22 17:38:42:3842 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
-2025-09-22 17:38:49:3849 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 17:38:50:3850 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
-2025-09-22 17:38:50:3850 [32minfo[39m: [32m🔐 Ethereal user: vcbzqxwfvlke5ddd@ethereal.email[39m
-2025-09-22 17:38:50:3850 [32minfo[39m: [32m🔐 Ethereal pass: Vy6YRAwdTc4emRRtDn[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32mEmail service is ready.[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m📧 Email service: Ready[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
-2025-09-22 17:38:53:3853 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
-2025-09-22 17:48:00:480 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
-2025-09-22 17:48:03:483 [32minfo[39m: [32mVerifying email configuration...[39m
-2025-09-22 17:48:04:484 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
-2025-09-22 17:48:04:484 [32minfo[39m: [32m🔐 Ethereal user: lwr2b7kkf7ihljzk@ethereal.email[39m
-2025-09-22 17:48:04:484 [32minfo[39m: [32m🔐 Ethereal pass: 81T4eP6aQrzK2UVNs2[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32mEmail service is ready.[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 5000[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m📧 Email service: Ready[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m📝 Environment: development[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m[39m
-[32m📋 Available endpoints:[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   GET  / - API information[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   GET  /api/health - Health check[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
-2025-09-22 17:48:07:487 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   GET  / - API information[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   GET  /api/health - Health check[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
+2025-10-02 10:58:00:580 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m

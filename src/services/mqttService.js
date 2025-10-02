@@ -13,7 +13,7 @@ class BackendMQTTService extends EventEmitter {
 
   getConfigFromEnv() {
     return {
-      host: process.env.MQTT_HOST || 'localhost',
+      host: process.env.MQTT_HOST || 'test.mosquitto.org',
       port: Number(process.env.MQTT_PORT) || 1883,
       protocol: process.env.MQTT_PROTOCOL || 'mqtt',
       username: process.env.MQTT_USERNAME || undefined,

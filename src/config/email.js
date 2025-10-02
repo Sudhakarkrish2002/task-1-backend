@@ -46,6 +46,7 @@ async function getActiveTransporter() {
       logger.warn('⚠️ Email credentials not provided. Using Ethereal test SMTP.');
       logger.info(`🔐 Ethereal user: ${testAccount.user}`);
       logger.info(`🔐 Ethereal pass: ${testAccount.pass}`);
+      logger.info('📧 For testing, check Ethereal inbox at: https://ethereal.email/');
       return transporter;
     } catch (error) {
       logger.error('❌ Failed to create Ethereal test transporter:', error.message);

@@ -82,7 +82,7 @@ router.post('/request-reset', resetPasswordLimiter, async (req, res) => {
     });
 
     // Generate reset link
-    const resetLink = `${process.env.FRONTEND_URL || 'http://localhost:3000'}/reset-password?token=${resetToken}&email=${encodeURIComponent(normalizedEmail)}`;
+    const resetLink = `${process.env.FRONTEND_URL || 'http://localhost:5174'}/reset-password?token=${resetToken}&email=${encodeURIComponent(normalizedEmail)}`;
 
     logger.info('Generated reset link:', { token: resetToken, email: normalizedEmail });
 

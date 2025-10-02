@@ -35,6 +35,7 @@ const saveDashboardSchema = Joi.object({
 
 const publishDashboardSchema = Joi.object({
   id: Joi.string().required(),
+  topicId: Joi.string().optional(), // Allow topicId from frontend
   name: Joi.string().required(),
   widgets: Joi.array().required(),
   layout: Joi.object().optional(),
@@ -252,10 +253,14 @@ router.post('/publish', async (req, res) => {
     const shareableLink = `${process.env.FRONTEND_URL || 'http://localhost:3000'}/shared/${shareableId}`;
     const sharePassword = Math.random().toString(36).substring(2, 8).toUpperCase();
 
+    // Generate or use existing topicId for MQTT communication
+    const topicId = dashboardData.topicId || existingDashboard.topicId || generateTopicId();
+    
     // Update dashboard with publish data
     const publishedDashboard = {
       ...existingDashboard,
       ...dashboardData,
+      topicId: topicId, // CRITICAL: Ensure topicId is set for MQTT
       isPublished: true,
       publishedAt: new Date().toISOString(),
       shareableLink: shareableLink,
@@ -270,6 +275,7 @@ router.post('/publish', async (req, res) => {
     // Store shared dashboard data for public access
     const sharedDashboardData = {
       panelId: shareableId,
+      topicId: topicId, // CRITICAL: Include topicId for MQTT communication
       widgets: publishedDashboard.widgets || [],
       layouts: publishedDashboard.layout || {}, // Keep as layout for backend consistency
       title: publishedDashboard.name || 'Shared Dashboard',
@@ -284,6 +290,7 @@ router.post('/publish', async (req, res) => {
 
     logger.info('Dashboard published successfully:', { 
       dashboardId: dashboardData.id,
+      topicId: topicId,
       shareableId: shareableId,
       userId: userId,
       widgetCount: publishedDashboard.widgets.length
@@ -294,6 +301,7 @@ router.post('/publish', async (req, res) => {
       message: 'Dashboard published successfully',
       dashboard: {
         id: publishedDashboard.id,
+        topicId: topicId, // CRITICAL: Return topicId to frontend
         name: publishedDashboard.name,
         isPublished: true,
         publishedAt: publishedDashboard.publishedAt,
