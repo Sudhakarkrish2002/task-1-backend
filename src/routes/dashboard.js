@@ -250,7 +250,7 @@ router.post('/publish', async (req, res) => {
 
     // Generate shareable link and password
     const shareableId = `shared-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-    const shareableLink = `${process.env.FRONTEND_URL || 'http://localhost:3000'}/shared/${shareableId}`;
+    const shareableLink = `${process.env.FRONTEND_URL || 'http://localhost:5174'}/shared/${shareableId}`;
     const sharePassword = Math.random().toString(36).substring(2, 8).toUpperCase();
 
     // Generate or use existing topicId for MQTT communication

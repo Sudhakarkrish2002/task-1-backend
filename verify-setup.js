@@ -47,7 +47,7 @@ async function testBackend() {
   return new Promise((resolve) => {
     console.log('2️⃣ Testing Backend WebSocket Server...');
     
-    const ws = new WebSocket('ws://localhost:3000/ws');
+    const ws = new WebSocket('ws://localhost:5000/ws');
     
     const timeout = setTimeout(() => {
       console.log('❌ Backend WebSocket timeout - Backend not running');
