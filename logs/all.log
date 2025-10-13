@@ -1936,3 +1936,124 @@
 2025-10-08 13:13:05:135 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
 2025-10-08 13:13:05:135 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
 2025-10-08 13:13:05:135 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
+2025-10-09 09:26:32:2632 [32minfo[39m: [32mVerifying email configuration...[39m
+2025-10-09 09:26:33:2633 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
+2025-10-09 09:26:33:2633 [32minfo[39m: [32m🔐 Ethereal user: bbk72iibvdlrhywb@ethereal.email[39m
+2025-10-09 09:26:33:2633 [32minfo[39m: [32m🔐 Ethereal pass: dCx3EDsBq8qyEY3nJj[39m
+2025-10-09 09:26:33:2633 [32minfo[39m: [32m📧 For testing, check Ethereal inbox at: https://ethereal.email/[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32mEmail service is ready.[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 3000[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m📧 Email service: Ready[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m📝 Environment: development[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m[39m
+[32m📋 Available endpoints:[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   GET  / - API information[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   GET  /api/health - Health check[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
+2025-10-09 09:26:36:2636 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
+2025-10-09 09:34:28:3428 [32minfo[39m: [32mVerifying email configuration...[39m
+2025-10-09 09:34:29:3429 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
+2025-10-09 09:34:29:3429 [32minfo[39m: [32m🔐 Ethereal user: jxlj6ere5vkz6x6c@ethereal.email[39m
+2025-10-09 09:34:29:3429 [32minfo[39m: [32m🔐 Ethereal pass: cbsKdRkdPCWqREPvtJ[39m
+2025-10-09 09:34:29:3429 [32minfo[39m: [32m📧 For testing, check Ethereal inbox at: https://ethereal.email/[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32mEmail service is ready.[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 3000[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m📧 Email service: Ready[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m📝 Environment: development[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m[39m
+[32m📋 Available endpoints:[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   GET  / - API information[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   GET  /api/health - Health check[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
+2025-10-09 09:34:32:3432 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
+2025-10-09 09:55:22:5522 [32minfo[39m: [32mSIGINT received. Shutting down gracefully...[39m
+2025-10-09 09:55:24:5524 [32minfo[39m: [32mVerifying email configuration...[39m
+2025-10-09 09:55:24:5524 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
+2025-10-09 09:55:24:5524 [32minfo[39m: [32m🔐 Ethereal user: wo5dbzshgb7vlywz@ethereal.email[39m
+2025-10-09 09:55:24:5524 [32minfo[39m: [32m🔐 Ethereal pass: YARkyHc5CJmBPCKt9r[39m
+2025-10-09 09:55:24:5524 [32minfo[39m: [32m📧 For testing, check Ethereal inbox at: https://ethereal.email/[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32mEmail service is ready.[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 3000[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m📧 Email service: Ready[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m📝 Environment: development[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m[39m
+[32m📋 Available endpoints:[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   GET  / - API information[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   GET  /api/health - Health check[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
+2025-10-09 09:55:28:5528 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
+2025-10-13 10:32:32:3232 [32minfo[39m: [32mVerifying email configuration...[39m
+2025-10-13 10:32:32:3232 [33mwarn[39m: [33m⚠️ Email credentials not provided. Using Ethereal test SMTP.[39m
+2025-10-13 10:32:32:3232 [32minfo[39m: [32m🔐 Ethereal user: rvs7ujfbbdvabbtw@ethereal.email[39m
+2025-10-13 10:32:32:3232 [32minfo[39m: [32m🔐 Ethereal pass: WxAuEjeY3TxaEpsV9a[39m
+2025-10-13 10:32:32:3232 [32minfo[39m: [32m📧 For testing, check Ethereal inbox at: https://ethereal.email/[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m✅ Email server is ready to send messages[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32mEmail service is ready.[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m🛰️ WebSocket server initialized at /ws[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m🚀 IoT Dashboard Backend Server running on port 3000[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m📧 Email service: Ready[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m🌐 Frontend URL: http://localhost:5173[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m📝 Environment: development[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m[39m
+[32m📋 Available endpoints:[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   GET  / - API information[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   GET  /api/docs - API documentation[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   POST /api/auth/request-reset - Request password reset[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   POST /api/auth/reset-password - Reset password with token[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   GET  /api/auth/validate-reset-token - Validate reset token[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   POST /api/dashboard/save - Save dashboard[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   PUT  /api/dashboard/update/:id - Update dashboard[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   POST /api/dashboard/publish - Publish dashboard[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   GET  /api/dashboard/shared/:id - Get shared dashboard[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   GET  /api/dashboard/user/:userId - Get user dashboards[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   DELETE /api/dashboard/:id - Delete dashboard[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   GET  /api/health - Health check[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   GET  /api/mqtt/health - MQTT health[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   GET  /api/mqtt/topics - MQTT known topics[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   GET  /api/mqtt/latest?topic=... - Latest message for topic[39m
+2025-10-13 10:32:35:3235 [32minfo[39m: [32m   POST /api/mqtt/publish - Publish message to topic[39m
